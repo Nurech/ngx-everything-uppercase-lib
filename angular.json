@@ -3,5 +3,36 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ngx-everything-uppercase": {
+      "projectType": "library",
+      "root": "projects/ngx-everything-uppercase",
+      "sourceRoot": "projects/ngx-everything-uppercase/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-everything-uppercase/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-everything-uppercase/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-everything-uppercase/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-everything-uppercase/src/test.ts",
+            "tsConfig": "projects/ngx-everything-uppercase/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-everything-uppercase/karma.conf.js"
+          }
+        }
+      }
+    }
   }
 }
