@@ -1,3 +1,5 @@
+Created for Medium article as an example:
+https://medium.com/@joosep.parts/create-an-angular-14-library-use-it-locally-when-developing-and-publish-the-package-to-npm-689ca2efdea8
 # NgxEverythingUppercase
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
